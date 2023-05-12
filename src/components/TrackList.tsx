@@ -1,5 +1,5 @@
 import React from 'react';
-import current from "../assets/images/beat1.jpg";
+// import current from "../assets/images/beat2.jpg";
 
 
 type ITrackList = {
@@ -11,14 +11,19 @@ type ITrackList = {
     group: string;
     year: number;
     duration: number;
+    image: string;
 }
 
-const TrackList:React.FC<ITrackList> = ({id,link, genre, track, group, year, duration}) => {
+const TrackList:React.FC<ITrackList> = ({id,link, genre, track, group, year, duration, image}) => {
+   const current = `../assets/images/beat4.jpg`
+    console.log(duration)
     return (
         <>
 
                     <div className="item">
-                        <div className="item-image" style={{backgroundImage: `url(${current})`}}></div>
+                        <div className="item-image" >
+                            <img src={image} alt="zxc"/>
+                        </div>
                         <div className="item-titles">
                             <h2 className="item-group">{group}</h2>
                             <h3 className="item-track">{track}</h3>

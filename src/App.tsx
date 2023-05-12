@@ -5,6 +5,7 @@ import current from './assets/images/beat1.jpg'
 import {data} from "./assets/data";
 import {ITrack} from "./models";
 import TrackList from './components/TrackList';
+import useSound from 'use-sound';
 
 
 function App() {
@@ -13,14 +14,19 @@ function App() {
     const [tracks, setTracks] = useState<ITrack[]>([])
 
 
+    const track: Array<ITrack[]> = data.map( (item) => {
+        const audio = new Audio(`./assets/audio/${item.link}`)
+
+        // @ts-ignore
+        const newItem: Array<ITrack> = {...item}
+        console.log(newItem)
+        return newItem
+    })
+
+    const [play, { pause, duration, sound }] = useSound(data);
 
     const getTracks = () => {
-       const track: Array<ITrack[]> = data.map( (item) => {
-            const audio = new Audio(`./assets/audio/${item.link}`)
-            // @ts-ignore
-            const newItem: Array<ITrack> = {...item, duration: audio.duration}
-            return newItem
-        })
+
         // @ts-ignore
         setTracks(track)
 
@@ -36,7 +42,6 @@ function App() {
 
 
   return (
-
       <div className="root">
           <h1>Music Player</h1>
           <main className="app">

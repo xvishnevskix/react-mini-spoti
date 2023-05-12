@@ -7,4 +7,5 @@ export interface ITrack {
     group: string;
     year: number;
     duration: number;
+    image: string;
 }

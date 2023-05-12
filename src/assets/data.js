@@ -1,3 +1,8 @@
+import image1 from "./images/beat1.jpg";
+import image2 from "./images/beat2.jpg";
+import image3 from "./images/beat3.jpg";
+import image4 from "./images/beat4.jpg";
+
 export const data = [
   {
     id: 1,
@@ -6,6 +11,7 @@ export const data = [
     track: "Enemy",
     group: "Imagine Dragons",
     year: 2019,
+    image: image1
   },
   {
     id: 2,
@@ -14,6 +20,7 @@ export const data = [
     track: "Next to Me",
     group: "Imagine Dragons",
     year: 2021,
+    image: image2
   },
   {
     id: 3,
@@ -22,6 +29,7 @@ export const data = [
     track: "Rammlied",
     group: "Rammstein",
     year: 2009,
+    image: image3
   },
   {
     id: 4,
@@ -30,5 +38,6 @@ export const data = [
     track: "The Search",
     group: "NF",
     year: 2018,
+    image: image4
   },
 ];
