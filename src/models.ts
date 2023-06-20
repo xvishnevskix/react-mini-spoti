@@ -1,5 +1,5 @@
 export interface ITrack {
-    id?: number,
+    id: number,
     title: string,
     link: string;
     genre: string;

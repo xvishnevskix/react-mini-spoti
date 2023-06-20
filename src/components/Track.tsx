@@ -1,9 +1,12 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+import useSound from 'use-sound';
+import { data } from '../assets/data';
 // import current from "../assets/images/beat2.jpg";
 
 
-type ITrackList = {
-    id?: number,
+
+type ITrack = {
+    id: number,
     title: string,
     link: string;
     genre: string;
@@ -14,13 +17,13 @@ type ITrackList = {
     image: string;
 }
 
-const TrackList:React.FC<ITrackList> = ({id,link, genre, track, group, year, duration, image}) => {
+const Track:React.FC<ITrack> = ({id,link, genre, track, group, year, image, duration }) => {
    const current = `../assets/images/beat4.jpg`
     console.log(duration)
     return (
         <>
-
                     <div className="item">
+
                         <div className="item-image" >
                             <img src={image} alt="zxc"/>
                         </div>
@@ -40,4 +43,4 @@ const TrackList:React.FC<ITrackList> = ({id,link, genre, track, group, year, dur
     );
 };
 
-export default TrackList;
+export default Track;

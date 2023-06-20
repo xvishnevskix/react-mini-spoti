@@ -11,7 +11,7 @@ export const data = [
     track: "Enemy",
     group: "Imagine Dragons",
     year: 2019,
-    image: image1
+    image: "https://i.scdn.co/image/ab67616d0000485125117af975d99add36db5023"
   },
   {
     id: 2,
@@ -41,3 +41,4 @@ export const data = [
     image: image4
   },
 ];
+
